@@ -25,6 +25,8 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/ks6088ts-labs/sandbox-go/cmd/aoai"
+
 	"github.com/ks6088ts-labs/sandbox-go/cmd/sandbox"
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
@@ -100,5 +102,6 @@ func initConfig() {
 // registerSubCommands registers sub commands
 func registerSubCommands() {
 	rootCmd.AddCommand(sandbox.GetCommand())
+	rootCmd.AddCommand(aoai.GetCommand())
 	// Add other sub commands here
 }
