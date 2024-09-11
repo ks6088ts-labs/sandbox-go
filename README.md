@@ -7,7 +7,7 @@
 [![docker-release](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/docker-release.yaml/badge.svg)](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/docker-release.yaml)
 [![ghcr-release](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/ghcr-release.yaml/badge.svg)](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/ghcr-release.yaml)
 
-# template-go
+# sandbox-go
 
 A GitHub template repository for Go
 
