@@ -21,7 +21,7 @@ THE SOFTWARE.
 */
 package main
 
-import "github.com/ks6088ts/template-go/cmd"
+import "github.com/ks6088ts-labs/sandbox-go/cmd"
 
 func main() {
 	cmd.Execute()

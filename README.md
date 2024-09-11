@@ -1,11 +1,11 @@
-[![test](https://github.com/ks6088ts/template-go/actions/workflows/test.yaml/badge.svg?branch=main)](https://github.com/ks6088ts/template-go/actions/workflows/test.yaml?query=branch%3Amain)
-[![release](https://github.com/ks6088ts/template-go/actions/workflows/release.yaml/badge.svg)](https://github.com/ks6088ts/template-go/actions/workflows/release.yaml)
-[![Go Report Card](https://goreportcard.com/badge/github.com/ks6088ts/template-go)](https://goreportcard.com/report/github.com/ks6088ts/template-go)
-[![Go Reference](https://pkg.go.dev/badge/github.com/ks6088ts/template-go.svg)](https://pkg.go.dev/github.com/ks6088ts/template-go)
+[![test](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/test.yaml/badge.svg?branch=main)](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/test.yaml?query=branch%3Amain)
+[![release](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/release.yaml/badge.svg)](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/release.yaml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ks6088ts-labs/sandbox-go)](https://goreportcard.com/report/github.com/ks6088ts-labs/sandbox-go)
+[![Go Reference](https://pkg.go.dev/badge/github.com/ks6088ts-labs/sandbox-go.svg)](https://pkg.go.dev/github.com/ks6088ts-labs/sandbox-go)
 
-[![docker](https://github.com/ks6088ts/template-go/actions/workflows/docker.yaml/badge.svg?branch=main)](https://github.com/ks6088ts/template-go/actions/workflows/docker.yaml?query=branch%3Amain)
-[![docker-release](https://github.com/ks6088ts/template-go/actions/workflows/docker-release.yaml/badge.svg)](https://github.com/ks6088ts/template-go/actions/workflows/docker-release.yaml)
-[![ghcr-release](https://github.com/ks6088ts/template-go/actions/workflows/ghcr-release.yaml/badge.svg)](https://github.com/ks6088ts/template-go/actions/workflows/ghcr-release.yaml)
+[![docker](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/docker.yaml/badge.svg?branch=main)](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/docker.yaml?query=branch%3Amain)
+[![docker-release](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/docker-release.yaml/badge.svg)](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/docker-release.yaml)
+[![ghcr-release](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/ghcr-release.yaml/badge.svg)](https://github.com/ks6088ts-labs/sandbox-go/actions/workflows/ghcr-release.yaml)
 
 # template-go
 
