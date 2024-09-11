@@ -19,10 +19,25 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
-package main
+package aoai
 
-import "github.com/ks6088ts-labs/sandbox-go/cmd"
+import (
+	"fmt"
 
-func main() {
-	cmd.Execute()
+	"github.com/spf13/cobra"
+)
+
+// aoaiCmd represents the aoai command
+var aoaiCmd = &cobra.Command{
+	Use:   "aoai",
+	Short: "A command for Azure OpenAI Service",
+	Long: `This is a command for Azure OpenAI Service.
+ref. https://learn.microsoft.com/azure/ai-services/openai/overview`,
+	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("aoai called")
+	},
+}
+
+func GetCommand() *cobra.Command {
+	return aoaiCmd
 }

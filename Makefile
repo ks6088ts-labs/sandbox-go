@@ -7,13 +7,13 @@ GOOS ?= $(shell go env GOOS)
 GOARCH ?= $(shell go env GOARCH)
 GOBUILD ?= GOOS=$(GOOS) GOARCH=$(GOARCH) CGO_ENABLED=0 go build
 LDFLAGS ?= '-s -w \
-	-X "github.com/ks6088ts/template-go/internal.Revision=$(GIT_REVISION)" \
-	-X "github.com/ks6088ts/template-go/internal.Version=$(GIT_TAG)" \
+	-X "github.com/ks6088ts-labs/sandbox-go/internal.Revision=$(GIT_REVISION)" \
+	-X "github.com/ks6088ts-labs/sandbox-go/internal.Version=$(GIT_TAG)" \
 '
 
 # Docker
 DOCKER_REPO_NAME ?= ks6088ts
-DOCKER_IMAGE_NAME ?= template-go
+DOCKER_IMAGE_NAME ?= sandbox-go
 DOCKER_COMMAND ?= /app
 
 # Tools
@@ -23,7 +23,7 @@ TRIVY_VERSION ?= 0.49.1
 
 # Misc
 OUTPUT_DIR ?= dist
-OUTPUT ?= $(OUTPUT_DIR)/template-go
+OUTPUT ?= $(OUTPUT_DIR)/sandbox-go
 
 .PHONY: help
 help:
@@ -54,6 +54,7 @@ test: ## run tests
 
 .PHONY: build
 build: ## build applications
+	go mod tidy
 	mkdir -p $(OUTPUT_DIR)
 	$(GOBUILD) -ldflags=$(LDFLAGS) -trimpath -o $(OUTPUT) .
 
