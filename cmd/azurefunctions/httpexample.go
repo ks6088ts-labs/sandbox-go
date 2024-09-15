@@ -55,7 +55,7 @@ to quickly create a Cobra application.`,
 			listenAddr = ":" + val
 		}
 		http.HandleFunc("/api/HttpExample", helloHandler)
-		log.Printf("About to listen on %s. Go to https://127.0.0.1%s/", listenAddr, listenAddr)
+		log.Printf("About to listen on %s. Go to http://127.0.0.1%s/api/HttpExample?name=world", listenAddr, listenAddr)
 		log.Fatal(http.ListenAndServe(listenAddr, nil))
 	},
 }

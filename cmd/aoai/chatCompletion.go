@@ -33,9 +33,9 @@ import (
 	"github.com/spf13/cobra"
 )
 
-// chatCompletionCmd represents the chatCompletion command
-var chatCompletionCmd = &cobra.Command{
-	Use:   "chatCompletion",
+// chatcompletionCmd represents the chatcompletion command
+var chatcompletionCmd = &cobra.Command{
+	Use:   "chatcompletion",
 	Short: "A command for Azure OpenAI Service Chat Completion",
 	Long:  `ref. https://learn.microsoft.com/azure/ai-services/openai/chatgpt-quickstart?tabs=command-line%2Cpython-new&pivots=programming-language-go`,
 	Run: func(cmd *cobra.Command, args []string) {
@@ -120,10 +120,10 @@ var chatCompletionCmd = &cobra.Command{
 }
 
 func init() {
-	aoaiCmd.AddCommand(chatCompletionCmd)
+	aoaiCmd.AddCommand(chatcompletionCmd)
 
-	chatCompletionCmd.Flags().StringP("modelDeploymentID", "d", "gpt-4o", "Model Deployment ID")
-	chatCompletionCmd.Flags().StringP("azureOpenAIEndpoint", "e", "", "Azure OpenAI Endpoint")
-	chatCompletionCmd.Flags().StringP("azureOpenAIKey", "k", "", "Azure OpenAI Key")
-	chatCompletionCmd.Flags().StringP("message", "m", "Hello, how are you?", "Message")
+	chatcompletionCmd.Flags().StringP("modelDeploymentID", "d", "gpt-4o", "Model Deployment ID")
+	chatcompletionCmd.Flags().StringP("azureOpenAIEndpoint", "e", "", "Azure OpenAI Endpoint")
+	chatcompletionCmd.Flags().StringP("azureOpenAIKey", "k", "", "Azure OpenAI Key")
+	chatcompletionCmd.Flags().StringP("message", "m", "Hello, how are you?", "Message")
 }
