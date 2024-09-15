@@ -14,9 +14,9 @@
   },
   "customHandler": {
     "description": {
-      "defaultExecutablePath": "dist/func",
+      "defaultExecutablePath": "dist/sandbox-go",
       "workingDirectory": "dist",
-      "arguments": []
+      "arguments": ["azurefunctions", "httpexample"]
     },
     "enableForwardingHttpRequest": true
   }

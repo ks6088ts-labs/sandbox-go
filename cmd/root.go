@@ -26,6 +26,7 @@ import (
 	"os"
 
 	"github.com/ks6088ts-labs/sandbox-go/cmd/aoai"
+	"github.com/ks6088ts-labs/sandbox-go/cmd/azurefunctions"
 
 	"github.com/ks6088ts-labs/sandbox-go/cmd/sandbox"
 	"github.com/spf13/cobra"
@@ -103,5 +104,6 @@ func initConfig() {
 func registerSubCommands() {
 	rootCmd.AddCommand(sandbox.GetCommand())
 	rootCmd.AddCommand(aoai.GetCommand())
+	rootCmd.AddCommand(azurefunctions.GetCommand())
 	// Add other sub commands here
 }

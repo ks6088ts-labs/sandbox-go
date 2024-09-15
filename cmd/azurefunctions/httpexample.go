@@ -19,17 +19,29 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
-package cmd
+package azurefunctions
 
 import (
 	"fmt"
+	"log"
+	"net/http"
+	"os"
 
 	"github.com/spf13/cobra"
 )
 
-// azureFunctionsCmd represents the azureFunctions command
-var azureFunctionsCmd = &cobra.Command{
-	Use:   "azureFunctions",
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+	message := "This HTTP triggered function executed successfully. Pass a name in the query string for a personalized response.\n"
+	name := r.URL.Query().Get("name")
+	if name != "" {
+		message = fmt.Sprintf("Hello, %s. This HTTP triggered function executed successfully.\n", name)
+	}
+	fmt.Fprint(w, message)
+}
+
+// httpexampleCmd represents the httpexample command
+var httpexampleCmd = &cobra.Command{
+	Use:   "httpexample",
 	Short: "A brief description of your command",
 	Long: `A longer description that spans multiple lines and likely contains examples
 and usage of using your command. For example:
@@ -38,20 +50,26 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("azureFunctions called")
+		listenAddr := ":8080"
+		if val, ok := os.LookupEnv("FUNCTIONS_CUSTOMHANDLER_PORT"); ok {
+			listenAddr = ":" + val
+		}
+		http.HandleFunc("/api/HttpExample", helloHandler)
+		log.Printf("About to listen on %s. Go to https://127.0.0.1%s/", listenAddr, listenAddr)
+		log.Fatal(http.ListenAndServe(listenAddr, nil))
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(azureFunctionsCmd)
+	azurefunctionsCmd.AddCommand(httpexampleCmd)
 
 	// Here you will define your flags and configuration settings.
 
 	// Cobra supports Persistent Flags which will work for this command
 	// and all subcommands, e.g.:
-	// azureFunctionsCmd.PersistentFlags().String("foo", "", "A help for foo")
+	// httpexampleCmd.PersistentFlags().String("foo", "", "A help for foo")
 
 	// Cobra supports local flags which will only run when this command
 	// is called directly, e.g.:
-	// azureFunctionsCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
+	// httpexampleCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
