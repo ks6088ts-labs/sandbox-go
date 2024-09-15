@@ -9,7 +9,8 @@ if [ -z "$FUNCTION_APP_NAME" ]; then
 fi
 
 # Build the function app
-make build GOOS=linux GOARCH=amd64
+make build GOOS=linux GOARCH=amd64 OUTPUT=assets/azurefunctions/dist/sandbox-go
 
 # Deploy the function app
+cd assets/azurefunctions
 func azure functionapp publish "$FUNCTION_APP_NAME"
