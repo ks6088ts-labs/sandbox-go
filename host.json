@@ -15,7 +15,7 @@
   "customHandler": {
     "description": {
       "defaultExecutablePath": "dist/func",
-      "workingDirectory": "",
+      "workingDirectory": "dist",
       "arguments": []
     },
     "enableForwardingHttpRequest": true
